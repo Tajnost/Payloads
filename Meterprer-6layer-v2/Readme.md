@@ -16,13 +16,7 @@ This system uses **6 layers of polymorphic encoding** on top of AES-256-GCM encr
 6. **Junk Insertion** - Insert marker bytes (0xAA) before each real byte
 7. **AES-256-GCM** - Final encryption layer
 
-### Why This Evades Signatures:
 
-- **Polymorphic**: Each build produces completely different output
-- **Multi-layer**: Must reverse 7 layers to get original shellcode
-- **No Patterns**: Random keys mean no static signatures
-- **Junk Bytes**: Doubles payload size, breaks pattern matching
-- **AES Encryption**: Final layer prevents any static analysis
 
 ## Quick Start
 
